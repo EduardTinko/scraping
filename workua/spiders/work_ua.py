@@ -21,7 +21,9 @@ class WorkUaSpider(scrapy.Spider):
             )
             if salary:
                 salary = (
-                    salary.replace("\u202f", "").replace("\xa0", "").replace("\u2009", "")
+                    salary.replace("\u202f", "")
+                    .replace("\xa0", "")
+                    .replace("\u2009", "")
                 )
             else:
                 salary = None
